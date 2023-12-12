@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Carregamento do Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Links e Scripts para Bibliotecas jQuery, Select2 e DataTables -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script> 
+</head>
+
+<body>
+    <div class="container center">
+        <h1>Cadastro de Livros</h1>
+        <img src="images/livros.jpg" id="image" width="25%" alt="Livro"/>
+        <img src="images/livros2.jpg" id="image" width="25%" alt="Livro"/>
+        <img src="images/livros3.jpg" id="image" width="25%" alt="Livro"/>
+
+        <form id="bookForm" class="formCadastro">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="body">Descrição:</label>
+            <textarea id="body" name="body" required></textarea>
+
+            <input type="submit" value="Cadastrar Livro">
+        </form>
+
+        <a type="button" href="cadastro-list.html">Consultar Lista de Cadastro</a>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body {
+    background-image: url('images/biblioteca.jpg');
+}
+
+.container {
+    background: #fff;
+    margin: 100px auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333; 
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.formCadastro {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+    gap: 10px;
+}
+
+input[type="submit"] {
+    padding: 8px 16px;
+    margin-top: 25px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #056430;
+}
+
+a {
+    display: block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 20px;
+    color: #4CAF50;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#bookTable th {
+    text-align: center;
+}
+
+.filtro {
+    width: 600px;
+    margin: 25px 0px 50px 100px;
+}
+
+
+
+

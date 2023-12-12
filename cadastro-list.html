@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Livros</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Carregamento do Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Carregamento Biblioteca de Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Links e Scripts para Bibliotecas jQuery, Select2 e DataTables -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>  
+    
+    <!-- Bootstrap JavaScript para modais -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <h1>Listagem de Livros</h1>
+            <img src="images/livros.jpg" id="image" width="25%" alt="Livro"/>
+            <img src="images/livros2.jpg" id="image" width="25%" alt="Livro"/>
+            <img src="images/livros3.jpg" id="image" width="25%" alt="Livro"/><br>
+        </div>
+
+        <div class="filtro">
+            <label for="filterTitle">Filtrar por Título:</label>
+            <select id="filterTitle" class="form-control" placeholder="Filtrar Título"></select>
+        </div>
+    
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>UserID <input type="text" class="form-control form-control-sm" placeholder="Filtrar UserID"></th>
+                    <th>ID <input type="text" class="form-control form-control-sm" placeholder="Filtrar ID"></th>
+                    <th>Título <input type="text" class="form-control form-control-sm" placeholder="Filtrar Título"></th>
+                    <th>Descrição <input type="text" class="form-control form-control-sm" placeholder="Filtrar Descrição"></th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados do livro serão preenchidos dinamicamente -->
+            </tbody>
+        </table>
+        <a type="button" href="cadastro-form.html">Voltar para Formulário de Cadastro</a>
+    </div>
+
+    <!-- Modal para editar livro -->
+    <div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBookModalLabel">Editar Livro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editBookForm">
+                        <div class="mb-3">
+                            <label for="editUserId" class="form-label">User ID</label>
+                            <input type="text" class="form-control" id="editUserId" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editId" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="editId" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTitle" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="editTitle">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editBody" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="editBody" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="saveChanges()">Salvar Mudanças</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
